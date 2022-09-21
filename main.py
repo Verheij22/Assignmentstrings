@@ -17,15 +17,14 @@ print (report)
    
     #part 2
 player = 'Jan Wouters'
-first_name = player[:3]     #  first_name = player.find (' ')
-last_name = player[4:]
-print (first_name)          
-
-last_name_len = len('Wouters')
-last_name_total = player.find('Wouters') 
+first_name = player[:player.find(' ')]
+last_name = player[player.find(' '):]
+print (first_name) 
+ 
+last_name_len = len(player[player.find(' '):-1])
 print (last_name_len)
 
-name_short = (player[0] + '. ' + last_name)
+name_short = (player[0] + '.' + last_name)
 print (name_short)
 
 yell = first_name + '! '
@@ -35,7 +34,3 @@ print (chant)
 
 good_chant = (chant[-1] != ' ')
 print (good_chant)
-
-
-
-
